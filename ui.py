@@ -1,15 +1,11 @@
-import dearpygui.dearpygui as dpg
+from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow
 
-def setup(title, width, height):
-    # Create screen
-    dpg.create_context()
-    dpg.create_viewport(title, width, height)
+# Grab context, only one instance required
+CONTEXT = QApplication([])
 
-    # Initialize
-    dpg.setup_dearpygui()
-    dpg.show_viewport()
-    dpg.start_dearpygui()
+# Create window and show it
+WINDOW = QMainWindow() 
+WINDOW.show()
 
-def close():
-    # Clean up resources
-    dpg.destroy_context()
+# Start the event loop
+CONTEXT.exec()
