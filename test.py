@@ -1,4 +1,5 @@
-from todo import Todo
+"""Run tests on core"""
+from core.todo import Todo
 from datetime import date
 
 def test_todo():

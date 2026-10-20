@@ -1,8 +1,14 @@
-import core.ui
-from core.todo import Todo
+"""Application Entry Point"""
+from core.ui import Window
+from PyQt6.QtWidgets import QApplication
 
-def main():
-    pass
+# Grab context, only one instance required
+context = QApplication([])
 
-if __name__ == '__init__':
-    main()
+# Create window and show it
+window = Window()
+window.show()
+
+# Start the event loop
+context.exec()
+
