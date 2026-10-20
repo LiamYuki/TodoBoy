@@ -1,5 +1,5 @@
-import ui
-from todo import Todo
+import core.ui
+from core.todo import Todo
 
 def main():
     pass
